@@ -1,20 +1,18 @@
 #include "mbed.h"
 
+DigitalOut led1(LED1);
+DigitalOut led2(LED2);
+DigitalOut led3(LED3);
 
-    DigitalOut led1(LED1);
-    DigitalOut led2(LED2);
-    DigitalOut led3(LED3);
+void blink5(){
 
-    void blink5(){
+    for (int i = 0; i < 5; i++){
+        led1 = 1; led2 = 1; led3 = 1;
+        ThisThread::sleep_for(200ms);
 
-        for (int i = 0; i < 5; i++){
-            led1 = 1; led2 = 1; led3 = 1;
-            ThisThread::sleep_for(200ms);
-
-            led1 = 0; led2 = 0; led3 = 0;
-            ThisThread::sleep_for(200ms);
-        }
-    }
+        led1 = 0; led2 = 0; led3 = 0;
+        thisThread::sleep_for(200ms);
+        } }
 
     int main(){
 
@@ -25,4 +23,5 @@
         led3 = 0;
     
     while(true){}
-    }
+    
+}
