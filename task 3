@@ -1,11 +1,8 @@
 #include "mbed.h"
-
-// Blinking rate in ms 
 #define BLINKING_RATE 200ms 
 
 int main()
 { 
-    // Initialise the digital pin LED1 as output 
 
     DigitalOut led1(LED1);
     DigitalOut led2(LED2);
@@ -33,5 +30,4 @@ int main()
         if(count >= 8){
             count = 0;
         }
-    }
-}
+    } }
